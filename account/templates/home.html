@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{% if request.user.is_authenticated %}
+    {% if teams.exists %}
+        {% for team in teams %}
+            <b3> {{ team.name }}</b3>
+        {% endfor %}
+    {% else %}
+        <b3> None</b3>
+    {% endif %}
+{% endif %}
+
+</body>
+</html>
